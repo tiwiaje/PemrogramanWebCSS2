@@ -49,12 +49,15 @@ body {
     text-decoration: none;
     font-weight: bold;
     padding: 8px 12px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
     border-radius: 4px;
 }
 
-.navbar a:hover {
+.navbar a:hover,
+.navbar a:focus {
     background-color: #3b5770;
+    transform: scale(1.05);
+    outline: none;
 }
 
 .nav-toggle {
@@ -111,8 +114,10 @@ body {
     transition: transform 0.3s;
 }
 
-.project-list img:hover {
+.project-list img:hover,
+.project-list img:focus {
     transform: scale(1.03);
+    outline: none;
 }
 
 .gallery {
@@ -129,8 +134,10 @@ body {
     transition: transform 0.3s;
 }
 
-.gallery img:hover {
+.gallery img:hover,
+.gallery img:focus {
     transform: scale(1.05);
+    outline: none;
 }
 
 .box-model-example,
@@ -172,6 +179,10 @@ form input, form textarea {
     color: #1b2631;
 }
 
+form input:focus, form textarea:focus {
+    outline: 2px solid #3498db;
+}
+
 button {
     width: 100%;
     background-color: #3498db;
@@ -180,11 +191,14 @@ button {
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-button:hover {
+button:hover,
+button:focus {
     background-color: #2471a3;
+    transform: scale(1.03);
+    outline: none;
 }
 
 footer {
